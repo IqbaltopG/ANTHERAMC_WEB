@@ -19,13 +19,13 @@ export function Navbar() {
     <header className="nav-shell">
       <nav className="nav container">
         <Link href="/" className="brand" aria-label={`${siteConfig.name} home`}>
-          <span className="brand-mark">R</span>
+          <span className="brand-mark">A</span>
           <span>{siteConfig.name}</span>
         </Link>
         <button className="menu-btn" onClick={() => setOpen(!open)} aria-label="Toggle menu">☰</button>
         <div className={`nav-links ${open ? "open" : ""}`}>
           {links.map(([href, label]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
-          <Link className="nav-dashboard" href="/dashboard" onClick={() => setOpen(false)}>COMMAND CENTER</Link>
+          <Link className="nav-dashboard" href="/dashboard" onClick={() => setOpen(false)}>PLAYER DASHBOARD</Link>
           <a className="nav-discord" href={siteConfig.discord} target="_blank" rel="noreferrer">Discord ↗</a>
         </div>
       </nav>

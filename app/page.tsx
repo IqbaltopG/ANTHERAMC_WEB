@@ -9,18 +9,14 @@ export default function Home() {
   return (
     <>
       <section className="hero hero-v2">
-        <div className="hero-grid-overlay" />
-        <div className="hero-noise" />
-        <div className="hero-orb orb-one" />
-        <div className="hero-orb orb-two" />
         <div className="container hero-content hero-content-v2">
           <div className="hero-copy">
             <div className="hero-kicker"><ServerStatus compact /><span>SEASON 00 // {siteConfig.season}</span></div>
-            <h1><span>MINECRAFT,</span><br/>BUILT LIKE<br/><em>A REAL RPG.</em></h1>
-            <p>{siteConfig.tagline} Custom combat, 3D gear, living economy, dungeon instances, collections, season progression, dan cross-play dalam satu network.</p>
+            <h1><span>NOT JUST A SERVER,</span><br/>IT'S A<br/><em>LIVING WORLD.</em></h1>
+            <p>Lebih dari sekadar block. Rasakan pengalaman RPG sesungguhnya dengan custom combat, dungeon, ekonomi yang hidup, dan sistem class dalam satu network cross-play.</p>
             <div className="hero-actions">
               <CopyIpButton ip={siteConfig.javaIp} />
-              <Link className="btn btn-ghost" href="/dashboard">OPEN COMMAND CENTER</Link>
+              <Link className="btn btn-ghost" href="/dashboard">ENTER DASHBOARD</Link>
             </div>
             <div className="ip-row"><span>JAVA</span><b>{siteConfig.javaIp}</b><span>BEDROCK</span><b>{siteConfig.bedrockIp}:{siteConfig.bedrockPort}</b></div>
           </div>
@@ -47,12 +43,12 @@ export default function Home() {
           <div className="section-head"><div><span className="eyebrow">ONE ACCOUNT // WHOLE NETWORK</span><h2>YOUR GAME.<br/>OUTSIDE THE GAME.</h2></div><p>Website bukan brosur. Ini portal karakter. Player bisa lihat progress, collection, dungeon history, achievement, battle pass, rank, dan entitlement tanpa harus login ke Minecraft.</p></div>
           <div className="portal-grid">
             <Link href="/dashboard" className="portal-card portal-main">
-              <span className="portal-code">01 // COMMAND CENTER</span><h3>Player Dashboard</h3><p>Live character overview, currency, stats, skill progression, loadout, season rank, dan quick actions.</p>
+              <h3>Player Dashboard</h3><p>Live character overview, currency, stats, skill progression, loadout, season rank, dan quick actions.</p>
               <div className="mini-terminal"><span>POWER</span><b>{player.power.toLocaleString()}</b><span>LEVEL</span><b>{player.level}</b><span>RANK</span><b>#{player.seasonRank}</b></div>
             </Link>
-            <Link href="/collections" className="portal-card"><span className="portal-code">02 // COLLECTION</span><h3>Pets & Relics</h3><p>Collection completion, rarity, pet level, unlock source, dan cosmetic ownership.</p><div className="collection-icons">{pets.slice(0,4).map(p => <i key={p.name}>{p.icon}</i>)}</div></Link>
-            <Link href="/dungeons" className="portal-card"><span className="portal-code">03 // ENDGAME</span><h3>Dungeon Records</h3><p>Tier progression, personal best, boss clears, party history, dan weekly challenge.</p><div className="run-line"><b>{dungeons[0].tier}</b><span>{dungeons[0].name}</span><strong>{dungeons[0].best}</strong></div></Link>
-            <Link href="/battle-pass" className="portal-card"><span className="portal-code">04 // SEASON</span><h3>Battle Pass</h3><p>Season XP, free/premium reward track, mission progression, dan claim state.</p><div className="pass-progress"><span>LV {player.battlePassLevel}</span><ProgressBar value={player.battlePassXp} max={player.battlePassNext}/><b>{player.battlePassXp.toLocaleString()} / {player.battlePassNext.toLocaleString()} XP</b></div></Link>
+            <Link href="/collections" className="portal-card"><h3>Pets & Relics</h3><p>Collection completion, rarity, pet level, unlock source, dan cosmetic ownership.</p><div className="collection-icons">{pets.slice(0,4).map(p => <i key={p.name}>{p.icon}</i>)}</div></Link>
+            <Link href="/dungeons" className="portal-card"><h3>Dungeon Records</h3><p>Tier progression, personal best, boss clears, party history, dan weekly challenge.</p><div className="run-line"><b>{dungeons[0].tier}</b><span>{dungeons[0].name}</span><strong>{dungeons[0].best}</strong></div></Link>
+            <Link href="/battle-pass" className="portal-card"><h3>Battle Pass</h3><p>Season XP, free/premium reward track, mission progression, dan claim state.</p><div className="pass-progress"><span>LV {player.battlePassLevel}</span><ProgressBar value={player.battlePassXp} max={player.battlePassNext}/><b>{player.battlePassXp.toLocaleString()} / {player.battlePassNext.toLocaleString()} XP</b></div></Link>
           </div>
         </div>
       </section>

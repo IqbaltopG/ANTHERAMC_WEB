@@ -1,26 +1,26 @@
 export const modes = [
   {
-    code: "ORIGIN",
+    code: "REALM",
     title: "Survival RPG",
-    description: "Survival progresif dengan custom weapon, skill tree, quest, boss, ekonomi, dan dungeon instanced.",
+    description: "Server utama Anthera. Bertahan hidup di dunia yang buas, bangun kerajaanmu, pelajari skill, dan kalahkan monster mythic.",
     accent: "amber",
-    bullets: ["Custom 3D Weapons", "Aura Skills", "Quests & Economy"],
+    bullets: ["Custom Mobs", "Land Claiming", "Player Economy"],
     online: 72,
   },
   {
-    code: "ABYSS",
-    title: "Dungeons",
-    description: "Party dungeon, encounter bertahap, boss mekanikal, rare drops, dan seasonal challenge.",
+    code: "DUNGEON",
+    title: "The Abyss",
+    description: "Sistem dungeon terpisah dengan tingkat kesulitan bertahap. Bentuk party, pelajari mekanik boss, dan farming relik legendaris.",
     accent: "violet",
-    bullets: ["Instanced Runs", "Boss Mechanics", "Rare Loot"],
+    bullets: ["Instanced Bosses", "Rare Drops", "Weekly Affix"],
     online: 18,
   },
   {
-    code: "NEXUS",
-    title: "Seasonal Events",
-    description: "World boss, event komunitas, treasure hunt, dan konten musiman dengan reward eksklusif.",
+    code: "ARENA",
+    title: "PvP Warzone",
+    description: "Zona tanpa ampun untuk pertarungan antar player dan guild. Pertahankan spot farming terbaik dan rebut harta dari musuh.",
     accent: "cyan",
-    bullets: ["Live Events", "World Boss", "Season Rewards"],
+    bullets: ["Guild Wars", "Bounty System", "Risk & Reward"],
     online: 11,
   },
 ];
@@ -39,9 +39,9 @@ export const leaderboard = [
 ];
 
 export const storeItems = [
-  { name: "NOVA", price: "Rp35.000", badge: "Starter", perks: ["Prefix NOVA", "3 Homes", "Vault 2 rows", "Cosmetic trail", "Queue priority I"] },
-  { name: "CELESTIAL", price: "Rp75.000", badge: "Popular", perks: ["Prefix CELESTIAL", "6 Homes", "Vault 4 rows", "Cosmetic bundle", "Queue priority II", "Monthly style token"] },
-  { name: "ASCENDANT", price: "Rp149.000", badge: "Premium", perks: ["Prefix ASCENDANT", "10 Homes", "Vault 6 rows", "Pet skin pack", "Queue priority III", "Profile frame", "Season cosmetic token"] },
+  { name: "SQUIRE", price: "Rp25.000", badge: "Starter", perks: ["Prefix SQUIRE", "3 Homes", "Akses /kit squire", "Cosmetic ringan", "Prioritas Login Dasar"] },
+  { name: "KNIGHT", price: "Rp75.000", badge: "Popular", perks: ["Prefix KNIGHT", "6 Homes", "Akses /kit knight", "Armor Cosmetic", "Prioritas Login Sedang", "Warna Chat Kuning"] },
+  { name: "WARLORD", price: "Rp150.000", badge: "Premium", perks: ["Prefix WARLORD", "10 Homes", "Akses /kit warlord", "Weapon Skin Pack", "Bypass Antrean Login", "Aura Eksklusif", "Season Pass Gratis"] },
 ];
 
 export const votes = [
@@ -52,12 +52,12 @@ export const votes = [
 ];
 
 export const player = {
-  name: "ReyYoga",
-  className: "Riftblade",
+  name: "Reyyoga99",
+  className: "Shadowblade",
   level: 87,
   power: 12840,
-  rank: "ASCENDANT",
-  guild: "Nightfall",
+  rank: "WARLORD",
+  guild: "Bloodline",
   coins: 4289100,
   shards: 2480,
   playtime: "312h 44m",
