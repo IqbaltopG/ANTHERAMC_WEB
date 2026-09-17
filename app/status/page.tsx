@@ -1,0 +1,6 @@
+import { PageHero } from "@/components/PageHero";
+import { ServerStatus } from "@/components/ServerStatus";
+import { siteConfig } from "@/config/site";
+import { networkNodes } from "@/data/demo";
+export const metadata={title:"Network Status"};
+export default function StatusPage(){return <><PageHero eyebrow="NETWORK HEALTH" title="SYSTEM STATUS" text="Public health center untuk proxy, game runtime, dungeon cluster, event runtime, database, dan cross-play gateway."/><section className="section"><div className="container narrow-wide"><ServerStatus/><div className="node-list">{networkNodes.map(n=><div key={n.name}><span className="node-dot"/><div><b>{n.name}</b><small>{n.label}</small></div><strong>{n.status}</strong><em>{n.latency} ms</em></div>)}</div><div className="status-details"><div><span>JAVA ADDRESS</span><b>{siteConfig.javaIp}</b></div><div><span>BEDROCK ADDRESS</span><b>{siteConfig.bedrockIp}:{siteConfig.bedrockPort}</b></div><div><span>EDGE</span><b>Cloudflare + Velocity</b></div><div><span>CROSSPLAY</span><b>Geyser + Floodgate</b></div></div><div className="incident-box"><span>90 DAY HISTORY</span><h3>99.98% NETWORK UPTIME</h3><div>{Array.from({length:45}).map((_,i)=><i className={i===18?'warn':''} key={i}/>)}</div><small>No active incidents. One degraded period recorded in the demo timeline.</small></div></div></section></>}
